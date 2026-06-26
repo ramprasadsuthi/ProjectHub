@@ -1,0 +1,6 @@
+{
+  "name": "ProjectHub Pro",
+  "description": "Enterprise-grade project management and tracking platform with portfolio view, task kanban, Gantt chart, milestone tracking, and AI-powered project insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
