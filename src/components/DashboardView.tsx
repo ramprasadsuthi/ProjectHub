@@ -48,7 +48,7 @@ export default function DashboardView({
   const progressData = projects.map(p => ({
     name: p.code,
     progress: p.progress,
-    budget: p.estimatedBudget / 1000, // in $K
+    budget: p.estimatedBudget / 1000, // in ₹K
     actual: p.actualBudget / 1000,
   }));
 
@@ -214,7 +214,7 @@ export default function DashboardView({
           <div className="flex items-center justify-between">
             <div>
               <h2 className="font-display font-semibold text-slate-900 text-sm">Project Delivery Completion & Budget</h2>
-              <p className="text-xs text-slate-500">Tracking progress percentage vs. project estimated cost ($ thousands)</p>
+              <p className="text-xs text-slate-500">Tracking progress percentage vs. project estimated cost (₹ thousands)</p>
             </div>
             <Activity className="h-4 w-4 text-indigo-500" />
           </div>
@@ -241,7 +241,7 @@ export default function DashboardView({
                 />
                 <Legend verticalAlign="top" height={36} iconType="circle" />
                 <Area type="monotone" dataKey="progress" name="Completion %" stroke="#6366f1" strokeWidth={2} fillOpacity={1} fill="url(#colorProgress)" />
-                <Area type="monotone" dataKey="budget" name="Est. Budget ($K)" stroke="#10b981" strokeWidth={2} fillOpacity={1} fill="url(#colorBudget)" />
+                <Area type="monotone" dataKey="budget" name="Est. Budget (₹K)" stroke="#10b981" strokeWidth={2} fillOpacity={1} fill="url(#colorBudget)" />
               </AreaChart>
             </ResponsiveContainer>
           </div>

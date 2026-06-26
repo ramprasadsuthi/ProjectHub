@@ -3,7 +3,7 @@ import {
   Project, User, ProjectPriority, ProjectStatus, ProjectHealth 
 } from "../types";
 import { 
-  Plus, Search, Filter, Cpu, Calendar, DollarSign, Archive, 
+  Plus, Search, Filter, Cpu, Calendar, IndianRupee, Archive, 
   ExternalLink, UserCheck, ShieldAlert, Sparkles, CheckCircle2, 
   TrendingUp, RefreshCw, Layers, ArrowLeftRight, Code, BookOpen, GraduationCap, FolderOpen
 } from "lucide-react";
@@ -678,11 +678,11 @@ export default function ProjectsView({
                 </div>
                 <div>
                   <span className="text-slate-400 block font-medium">Est. Budget</span>
-                  <span className="font-semibold text-slate-900">${selectedProj.estimatedBudget.toLocaleString()}</span>
+                  <span className="font-semibold text-slate-900">₹{selectedProj.estimatedBudget.toLocaleString("en-IN")}</span>
                 </div>
                 <div>
                   <span className="text-slate-400 block font-medium">Actual Cost</span>
-                  <span className="font-semibold text-slate-900">${selectedProj.actualBudget.toLocaleString()}</span>
+                  <span className="font-semibold text-slate-900">₹{selectedProj.actualBudget.toLocaleString("en-IN")}</span>
                 </div>
               </div>
 
@@ -926,7 +926,7 @@ export default function ProjectsView({
 
                   <div className="grid grid-cols-2 gap-3">
                     <div className="space-y-1">
-                      <label className="font-semibold text-slate-700 block">Estimated Budget ($ USD)</label>
+                      <label className="font-semibold text-slate-700 block">Estimated Budget (₹ INR)</label>
                       <input
                         type="number"
                         placeholder="85000"

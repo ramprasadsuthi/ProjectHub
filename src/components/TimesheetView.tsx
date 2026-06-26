@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Project, Task, TimeLog, User } from "../types";
 import { 
   Clock, Plus, Filter, Calendar, FileText, Download, CheckCircle, 
-  XCircle, AlertCircle, TrendingUp, DollarSign
+  XCircle, AlertCircle, TrendingUp, IndianRupee
 } from "lucide-react";
 
 interface TimesheetProps {
@@ -75,7 +75,7 @@ export default function TimesheetView({
 
         <div className="glass-card rounded-xl p-5 border border-slate-100 flex items-center gap-4">
           <div className="p-3 rounded-lg bg-emerald-50 text-emerald-700">
-            <DollarSign className="h-5 w-5" />
+            <IndianRupee className="h-5 w-5" />
           </div>
           <div>
             <span className="text-[10px] text-slate-400 block font-bold uppercase">Billable Ratio</span>
@@ -93,9 +93,9 @@ export default function TimesheetView({
           <div>
             <span className="text-[10px] text-slate-400 block font-bold uppercase">Est. Resource Cost</span>
             <span className="text-xl font-bold text-slate-900 block">
-              ${(totalHours * 75).toLocaleString()}
+              ₹{(totalHours * 6225).toLocaleString("en-IN")}
             </span>
-            <span className="text-[10px] text-slate-500 font-semibold block mt-0.5">Calculated at flat $75/hr average</span>
+            <span className="text-[10px] text-slate-500 font-semibold block mt-0.5">Calculated at flat ₹6,225/hr average</span>
           </div>
         </div>
       </div>

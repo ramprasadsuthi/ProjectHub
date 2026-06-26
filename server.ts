@@ -1266,7 +1266,7 @@ app.post("/api/v1/ai/summary", async (req, res) => {
     - Status: ${proj.status}
     - Timeline: ${proj.startDate} to ${proj.targetEndDate}
     - Health: ${proj.health}
-    - Estimated Budget: $${proj.estimatedBudget}
+    - Estimated Budget: ₹${proj.estimatedBudget}
     
     Current Progress: ${proj.progress}%
     
@@ -1302,7 +1302,7 @@ app.post("/api/v1/ai/summary", async (req, res) => {
 ### ⚡ Executive Summary (Simulated Offline Mode)
 
 The **${proj.name}** project is currently tracked in the **${proj.status}** phase with a recorded progress level of **${proj.progress}%**.
-The estimated budget is **$${proj.estimatedBudget.toLocaleString()}** with an asset health marker of **${proj.health}**.
+The estimated budget is **₹${proj.estimatedBudget.toLocaleString("en-IN")}** with an asset health marker of **${proj.health}**.
 
 #### 🎯 Key Recommendations
 1. **Accelerate Milestones**: Ensure all pending dependencies are streamlined.
